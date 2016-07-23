@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace FriendlyHelpers
 {
-    class User
+    public class User
     {
         #region Properties
         public string FirstName { get; set; }
@@ -14,5 +14,6 @@ namespace FriendlyHelpers
         public string Address { get; set; }
         public string Phone { get; set; }
         #endregion
+
     }
 }
