@@ -47,6 +47,7 @@ namespace FriendlyHelpers
             task1.TaskDescription = Console.ReadLine();
             Console.Write("Date and Time you need it completed (eg. ..format?): ");
             task1.DateandTime = Console.ReadLine();
+            // Have to figure out format for date and time
 
             task1.Completed = false;
             return task1;
