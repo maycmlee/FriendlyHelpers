@@ -16,7 +16,24 @@ namespace FriendlyHelpers
         public string LastName { get; set; }
         public string Address { get; set; }
         public string Phone { get; set; }
-        #endregion 
+        #endregion
 
+        #region Methods
+        public Friend addFriend()
+        {
+            var friend1 = new Friend();
+            Console.WriteLine("Please enter your friend's information: ");
+            Console.Write("First Name: ");
+            friend1.FirstName = Console.ReadLine();
+            Console.Write("Last Name: ");
+            friend1.LastName = Console.ReadLine();
+            Console.Write("Address: ");
+            friend1.Address = Console.ReadLine();
+            Console.Write("Phone number: ");
+            friend1.Phone = Console.ReadLine();
+
+            return friend1;
+        }
+        #endregion
     }
 }
