@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace FriendlyHelpers
 {
-    class Friend
+    public class Friend
     {
         #region Properties
         public string FirstName { get; set; }

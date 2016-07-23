@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace FriendlyHelpers
 {
-    class Task
+    public class Task
     {
         /// <summary>
         /// This class creates a task that needs to be done.
