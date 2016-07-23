@@ -34,6 +34,13 @@ namespace FriendlyHelpers
 
             return friend1;
         }
+
+        public Task addTask()
+        {
+            var task1 = new Task();
+            Console.WriteLine("Please enter the details of what kind of help you need: );
+
+        }
         #endregion
     }
 }
