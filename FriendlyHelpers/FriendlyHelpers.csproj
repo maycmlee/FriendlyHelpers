@@ -55,6 +55,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Friend.cs" />
+    <Compile Include="FriendlyHelper.cs" />
     <Compile Include="FriendlyHelperModel.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
