@@ -20,6 +20,7 @@ namespace FriendlyHelpers
         // The task needs to be completed by this date and time.
         public DateTime DateandTime { get; set; }
         public bool Completed { get; set; }
+        public virtual User User { get; set; }
         #endregion
 
 
