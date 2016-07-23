@@ -13,6 +13,7 @@ namespace FriendlyHelpers
         public string LastName { get; set; }
         public string Address { get; set; }
         public int Phone { get; set; }
+        public virtual User User { get; set; }
         #endregion
     }
 }
