@@ -13,8 +13,12 @@ namespace FriendlyHelpers
         /// </summary>
         #region Properties
         public string TaskName { get; set; }
-        public DateTime DateandTime { get; set; }
+
+        public string TaskDescription { get; set; }
         public string Category { get; set; }
+
+        // The task needs to be completed by this date and time.
+        public DateTime DateandTime { get; set; }
         public bool Completed { get; set; }
         #endregion
 

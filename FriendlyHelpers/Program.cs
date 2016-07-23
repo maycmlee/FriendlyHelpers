@@ -6,6 +6,12 @@ using System.Threading.Tasks;
 
 namespace FriendlyHelpers
 {
+    /// <summary>
+    /// This program allows a user to add their friends to their account.
+    /// User will also add tasks that she/he needs help getting done 
+    /// (eg. shopping, cooking a meal, babysitting, etc.)
+    /// Friends can sign up to do task(s).
+    /// </summary>
     class Program
     {
         static void Main(string[] args)
