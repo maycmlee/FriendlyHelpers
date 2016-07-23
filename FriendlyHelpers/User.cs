@@ -38,8 +38,18 @@ namespace FriendlyHelpers
         public Task addTask()
         {
             var task1 = new Task();
-            Console.WriteLine("Please enter the details of what kind of help you need: );
+            Console.WriteLine("Please enter the details of what kind of help you need:");
+            Console.Write("What kind kind of help is it? (Shopping, Cleaning, Coooking, Childcare");
+            task1.Category = Console.ReadLine();
+            Console.Write("Please give a task name: ");
+            task1.TaskName = Console.ReadLine();
+            Console.Write("Task Description: ");
+            task1.TaskDescription = Console.ReadLine();
+            Console.Write("Date and Time you need it completed (eg. ..format?): ");
+            task1.DateandTime = Console.ReadLine();
 
+            task1.Completed = false;
+            return task1;
         }
         #endregion
     }
