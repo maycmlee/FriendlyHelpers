@@ -10,6 +10,14 @@ namespace FriendlyHelpers
     /// This is the factory class for registering
     /// new users.
     /// </summary>
+    /// 
+    public enum TaskTypes
+    {
+        Shopping,
+        Cleaning,
+        Cooking,
+        Childcare
+    }
     public static class FriendlyHelper
     {
     
