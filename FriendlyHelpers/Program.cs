@@ -16,6 +16,7 @@ namespace FriendlyHelpers
     {
         static void Main(string[] args)
         {
+            var user1 = FriendlyHelper.RegisterUser("May", "Lee", "245 Main St, Somewhere, Some State, 34444", "888-8888");
         }
     }
 }
