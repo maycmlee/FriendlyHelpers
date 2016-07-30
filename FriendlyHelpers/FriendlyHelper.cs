@@ -23,13 +23,14 @@ namespace FriendlyHelpers
     
         #region Methods
 
-        public static User RegisterUser(string firstName, string lastName, string address, string phone)
+        public static User RegisterUser(string firstName, string lastName, string address, string emailAddresss, string phone)
         {
             var user = new User
             {
                 FirstName = firstName,
                 LastName = lastName,
                 Address = address,
+                EmailAddress = emailAddresss,
                 Phone = phone
             };
 

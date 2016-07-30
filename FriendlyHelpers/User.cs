@@ -15,6 +15,7 @@ namespace FriendlyHelpers
         public string FirstName { get; set; }
         public string LastName { get; set; }
         public string Address { get; set; }
+        public string EmailAddress { get; set; }
         public string Phone { get; set; }
         #endregion
 
@@ -30,6 +31,8 @@ namespace FriendlyHelpers
             friend1.LastName = Console.ReadLine();
             Console.Write("Address: ");
             friend1.Address = Console.ReadLine();
+            Console.WriteLine("Email Address: ");
+            friend1.EmailAddress = Console.ReadLine();
             Console.Write("Phone number: ");
             friend1.Phone = Console.ReadLine();
 
@@ -67,7 +70,7 @@ namespace FriendlyHelpers
         public IEnumerable<Task> GetAllTasks(int userId)
         {
             var db = new FriendlyHelperModel();
-            var tasks = db.Tasks.Where(t => t.UserId == userId).FirstOrDefault();
+            var tasks = db.Tasks.Where(t => t.User.Id == userId).FirstOrDefault();
 
             return tasks;
         }
