@@ -67,7 +67,7 @@ namespace FriendlyHelpers
         public IEnumerable<Task> GetAllTasks(int userId)
         {
             var db = new FriendlyHelperModel();
-            var tasks = db.Tasks.Where(t => t.User.Id == userId).FirstOrDefault();
+            var tasks = db.Tasks.Where(t => t.UserId == userId).FirstOrDefault();
 
             return tasks;
         }
