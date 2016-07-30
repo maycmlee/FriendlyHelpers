@@ -32,6 +32,11 @@ namespace FriendlyHelpers
                 Address = address,
                 Phone = phone
             };
+
+            var db = new FriendlyHelperModel();
+            db.Users.Add(user);
+            db.SaveChanges();
+            db.Dispose();
             return user;
         }
         #endregion  
