@@ -62,12 +62,15 @@ namespace FriendlyHelpers
 
             return task1;
         }
+
         // This method is in the User class, do I have to pass in the user object?
-        //public IEnumerable<Task> GetAllTasks(User user)
-        //{
-        //    var db = new FriendlyHelperModel();
-        //    return;
-        //}
+        public IEnumerable<Task> GetAllTasks(int userId)
+        {
+            var db = new FriendlyHelperModel();
+            var tasks = db.Tasks.Where(t => t.User.Id == userId).FirstOrDefault();
+
+            return tasks;
+        }
         #endregion
     }
 }
