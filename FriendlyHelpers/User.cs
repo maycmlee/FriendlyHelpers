@@ -19,9 +19,10 @@ namespace FriendlyHelpers
         #endregion
 
         #region Methods
-        public Friend addFriend()
+        public Friend addFriend(User user)
         {
             var friend1 = new Friend();
+            friend1.User = user;
             Console.WriteLine("Please enter your friend's information: ");
             Console.Write("First Name: ");
             friend1.FirstName = Console.ReadLine();
