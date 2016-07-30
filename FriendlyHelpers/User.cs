@@ -40,23 +40,34 @@ namespace FriendlyHelpers
             return friend1;
         }
 
-        public Task addTask()
+        public Task addTask(User user)
         {
             var task1 = new Task();
-            Console.WriteLine("Please enter the details of what kind of help you need:");
-            Console.Write("What kind kind of help is it? (Shopping, Cleaning, Coooking, Childcare");
+            task1.User = user;
+            Console.Write("What kind of help do you need? (Shopping, Cleaning, Coooking, Childcare): ");
             task1.Category = Console.ReadLine();
-            Console.Write("Please give a task name: ");
+            Console.Write("Task name (eg. Groceries for the week): ");
             task1.TaskName = Console.ReadLine();
-            Console.Write("Task Description: ");
+            Console.Write("Task Description (eg. Please buy everything on the shopping list at Trader Joe's.): ");
             task1.TaskDescription = Console.ReadLine();
             //Console.Write("Date and Time you need it completed (eg. ..format?): ");
             //task1.DateandTime = Console.ReadLine();
             // Have to figure out format for date and time
-
             task1.Completed = false;
+
+            var db = new FriendlyHelperModel();
+            db.Tasks.Add(task1);
+            db.SaveChanges();
+            db.Dispose();
+
             return task1;
         }
+        // This method is in the User class, do I have to pass in the user object?
+        //public IEnumerable<Task> GetAllTasks(User user)
+        //{
+        //    var db = new FriendlyHelperModel();
+        //    return;
+        //}
         #endregion
     }
 }
