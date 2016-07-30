@@ -25,8 +25,8 @@ namespace FriendlyHelpers
         // public DateTime DateandTime { get; set; }
         public bool Completed { get; set; }
         public virtual User User { get; set; }
+        public TaskTypes TypeOfTask { get; set; }
         #endregion
-
 
     }
 }
