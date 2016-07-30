@@ -32,6 +32,10 @@ namespace FriendlyHelpers
             Console.Write("Phone number: ");
             friend1.Phone = Console.ReadLine();
 
+            var db = new FriendlyHelperModel();
+            db.Friends.Add(friend1);
+            db.SaveChanges();
+            db.Dispose();
             return friend1;
         }
 
