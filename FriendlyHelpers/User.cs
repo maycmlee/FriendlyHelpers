@@ -50,9 +50,9 @@ namespace FriendlyHelpers
             Console.Write("What kind of help do you need? (Shopping, Cleaning, Cooking, Childcare): ");
             task1.Category = Console.ReadLine();
             determineTaskType(task1, task1.Category);
-            Console.Write("Task name (eg. Afterschool for Karen): ");
+            Console.Write("Task name (eg. Katie Afterschool): ");
             task1.TaskName = Console.ReadLine();
-            Console.Write("Task Description (eg. Pick Karen up from school.  Give snack.  Help with her homework.): ");
+            Console.Write("Task Description (eg. Pick Katie up from school.  Give snack.  Help with her homework.): ");
             task1.TaskDescription = Console.ReadLine();
             //Console.Write("Date and Time you need it completed (eg. ..format?): ");
             //task1.DateandTime = Console.ReadLine();
@@ -65,10 +65,7 @@ namespace FriendlyHelpers
             db.Dispose();
 
             return task1;
-        }
-
-        // This method is in the User class, do I have to pass in the user object?
-        
+        }        
         #endregion
 
         #region Helper Methods
