@@ -47,7 +47,7 @@ namespace FriendlyHelpers
         {
             var task1 = new Task();
             task1.User = user;
-            Console.Write("What kind of help do you need? (Shopping, Cleaning, Coooking, Childcare): ");
+            Console.Write("What kind of help do you need? (Shopping, Cleaning, Cooking, Childcare): ");
             task1.Category = Console.ReadLine();
             determineTaskType(task1, task1.Category);
             Console.Write("Task name (eg. Afterschool for Karen): ");
