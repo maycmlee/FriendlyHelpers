@@ -57,6 +57,14 @@
     <Compile Include="Friend.cs" />
     <Compile Include="FriendlyHelper.cs" />
     <Compile Include="FriendlyHelperModel.cs" />
+    <Compile Include="Migrations\201608062039513_InitialCreate.cs" />
+    <Compile Include="Migrations\201608062039513_InitialCreate.Designer.cs">
+      <DependentUpon>201608062039513_InitialCreate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201608062055095_Changes.cs" />
+    <Compile Include="Migrations\201608062055095_Changes.Designer.cs">
+      <DependentUpon>201608062055095_Changes.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -66,6 +74,14 @@
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201608062039513_InitialCreate.resx">
+      <DependentUpon>201608062039513_InitialCreate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201608062055095_Changes.resx">
+      <DependentUpon>201608062055095_Changes.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

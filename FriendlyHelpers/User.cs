@@ -29,8 +29,6 @@ namespace FriendlyHelpers
             friend1.FirstName = Console.ReadLine();
             Console.Write("Last Name: ");
             friend1.LastName = Console.ReadLine();
-            Console.Write("Address: ");
-            friend1.Address = Console.ReadLine();
             Console.Write("Email Address: ");
             friend1.EmailAddress = Console.ReadLine();
             Console.Write("Phone number: ");
