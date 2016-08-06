@@ -49,6 +49,7 @@ namespace FriendlyHelpers
             task1.User = user;
             Console.Write("What kind of help do you need? (Shopping, Cleaning, Coooking, Childcare): ");
             task1.Category = Console.ReadLine();
+            determineTaskType(task1, task1.Category);
             Console.Write("Task name (eg. Groceries for the week): ");
             task1.TaskName = Console.ReadLine();
             Console.Write("Task Description (eg. Please buy everything on the shopping list at Trader Joe's.): ");
@@ -67,13 +68,47 @@ namespace FriendlyHelpers
         }
 
         // This method is in the User class, do I have to pass in the user object?
-        //public IEnumerable<Task> GetAllTasks(int userId)
-        //{
-        //    var db = new FriendlyHelperModel();
-        //    var tasks = db.Tasks.Where(t => t.User.Id == userId).FirstOrDefault();
+        public IEnumerable<Task> GetAllTasks(string emailAddress)
+        {
+            var db = new FriendlyHelperModel();
+            var user = db.Users.Where(u => u.EmailAddress == emailAddress);
+            if (user == null)
+                return null;
 
-        //    return tasks;
-        //}
+            var tasks = db.Tasks.Where(t => t.User.Id == user.Id).FirstOrDefault();
+            // One line method:
+            //var tasks = db.Tasks.Where(t => t.User.EmailAddress == emailAddress);
+            return tasks;
+        }
+        #endregion
+
+        #region Helper Methods
+        /// <summary>
+        /// Sets the correct task type entered by user to the TaskType enum
+        /// </summary>
+        /// <param name="task">Task object being created</param>
+        /// <param name="taskType">Task type entered by user</param>
+        private void determineTaskType(Task task, string taskType)
+        {
+            switch (taskType)
+            {
+                case "Shopping":
+                    task.TypeOfTask = TaskTypes.Shopping;
+                    break;
+
+                case "Cleaning":
+                    task.TypeOfTask = TaskTypes.Cleaning;
+                    break;
+
+                case "Cooking":
+                    task.TypeOfTask = TaskTypes.Cooking;
+                    break;
+
+                case "Childcare":
+                    task.TypeOfTask = TaskTypes.Childcare;
+                    break;
+            }
+        }
         #endregion
     }
 }
