@@ -40,6 +40,19 @@ namespace FriendlyHelpers
             db.Dispose();
             return user;
         }
+
+        public static IEnumerable<Task> GetAllTasksByUserEmail(string emailAddress)
+        {
+            var db = new FriendlyHelperModel();
+            var user = db.Users.Where(u => u.EmailAddress == emailAddress).FirstOrDefault();
+            if (user == null)
+                return null;
+
+            return db.Tasks.Where(t => t.User.Id == user.Id);
+            // One line method:
+            //var tasks = db.Tasks.Where(t => t.User.EmailAddress == emailAddress);
+
+        }
         #endregion  
 
     }

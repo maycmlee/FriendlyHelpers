@@ -68,18 +68,7 @@ namespace FriendlyHelpers
         }
 
         // This method is in the User class, do I have to pass in the user object?
-        public IEnumerable<Task> GetAllTasksByUserEmail(string emailAddress)
-        {
-            var db = new FriendlyHelperModel();
-            var user = db.Users.Where(u => u.EmailAddress == emailAddress).FirstOrDefault();
-            if (user == null)
-                return null;
-
-            return db.Tasks.Where(t => t.User.Id == user.Id);
-            // One line method:
-            //var tasks = db.Tasks.Where(t => t.User.EmailAddress == emailAddress);
-            
-        }
+        
         #endregion
 
         #region Helper Methods
