@@ -13,10 +13,10 @@ namespace FriendlyHelpers
     /// 
     public enum TaskTypes
     {
-        Shopping,
-        Cleaning,
-        Cooking,
-        Childcare
+        Shopping = 1,
+        Cleaning = 2,
+        Cooking = 3,
+        Childcare = 4
     }
     public static class FriendlyHelper
     {
