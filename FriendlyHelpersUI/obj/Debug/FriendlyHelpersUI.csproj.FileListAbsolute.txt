@@ -80,3 +80,5 @@ C:\Users\v-maylee\Documents\Visual Studio 2015\Projects\KalAcademy\FriendlyHelpe
 C:\Users\v-maylee\Documents\Visual Studio 2015\Projects\KalAcademy\FriendlyHelpers\FriendlyHelpersUI\obj\Debug\FriendlyHelpersUI.csprojResolveAssemblyReference.cache
 C:\Users\v-maylee\Documents\Visual Studio 2015\Projects\KalAcademy\FriendlyHelpers\FriendlyHelpersUI\obj\Debug\FriendlyHelpersUI.dll
 C:\Users\v-maylee\Documents\Visual Studio 2015\Projects\KalAcademy\FriendlyHelpers\FriendlyHelpersUI\obj\Debug\FriendlyHelpersUI.pdb
+C:\Users\v-maylee\Documents\Visual Studio 2015\Projects\KalAcademy\FriendlyHelpers\FriendlyHelpersUI\bin\FriendlyHelpers.dll
+C:\Users\v-maylee\Documents\Visual Studio 2015\Projects\KalAcademy\FriendlyHelpers\FriendlyHelpersUI\bin\FriendlyHelpers.pdb
