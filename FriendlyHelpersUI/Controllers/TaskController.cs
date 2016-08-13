@@ -13,8 +13,8 @@ namespace FriendlyHelpersUI.Controllers
         public ActionResult Index()
         {
 
-            FriendlyHelper.GetAllTasksByUserEmail(may@may.com);
-            return View();
+            var tasks = FriendlyHelper.GetAllTasksByUserEmail("may@may.com");
+            return View(tasks);
         }
     }
 }
