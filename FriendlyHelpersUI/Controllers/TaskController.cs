@@ -16,5 +16,10 @@ namespace FriendlyHelpersUI.Controllers
             var tasks = FriendlyHelper.GetAllTasksByUserEmail("may@may.com");
             return View(tasks);
         }
+
+        public ActionResult Create()
+        {
+            return View();
+        }
     }
 }
