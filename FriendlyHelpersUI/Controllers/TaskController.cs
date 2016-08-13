@@ -17,9 +17,17 @@ namespace FriendlyHelpersUI.Controllers
             return View(tasks);
         }
 
+        [HttpGet]
         public ActionResult Create()
         {
             return View();
+        }
+
+        [HttpPost]
+        public ActionResult Create(Task task)
+        {
+            //Need to revise addTask method
+            FriendlyHelper.addTask();
         }
     }
 }

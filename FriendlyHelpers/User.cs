@@ -41,58 +41,7 @@ namespace FriendlyHelpers
             return friend1;
         }
 
-        public Task addTask(User user)
-        {
-            var task1 = new Task();
-            task1.User = user;
-            Console.Write("What kind of help do you need? (Shopping, Cleaning, Cooking, Childcare): ");
-            task1.Category = Console.ReadLine();
-            determineTaskType(task1, task1.Category);
-            Console.Write("Task name (eg. Katie Afterschool): ");
-            task1.TaskName = Console.ReadLine();
-            Console.Write("Task Description (eg. Pick Katie up from school.  Give snack.  Help with her homework.): ");
-            task1.TaskDescription = Console.ReadLine();
-            //Console.Write("Date and Time you need it completed (eg. ..format?): ");
-            //task1.DateandTime = Console.ReadLine();
-            // Have to figure out format for date and time
-            task1.Completed = false;
-
-            var db = new FriendlyHelperModel();
-            db.Tasks.Add(task1);
-            db.SaveChanges();
-            db.Dispose();
-
-            return task1;
-        }        
         #endregion
 
-        #region Helper Methods
-        /// <summary>
-        /// Sets the correct task type entered by user to the TaskType enum
-        /// </summary>
-        /// <param name="task">Task object being created</param>
-        /// <param name="taskType">Task type entered by user</param>
-        private void determineTaskType(Task task, string taskType)
-        {
-            switch (taskType)
-            {
-                case "Shopping":
-                    task.TypeOfTask = TaskTypes.Shopping;
-                    break;
-
-                case "Cleaning":
-                    task.TypeOfTask = TaskTypes.Cleaning;
-                    break;
-
-                case "Cooking":
-                    task.TypeOfTask = TaskTypes.Cooking;
-                    break;
-
-                case "Childcare":
-                    task.TypeOfTask = TaskTypes.Childcare;
-                    break;
-            }
-        }
-        #endregion
     }
 }
