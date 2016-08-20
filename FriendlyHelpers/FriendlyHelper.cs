@@ -41,16 +41,12 @@ namespace FriendlyHelpers
             return user;
         }
 
-        public static Task addTask(string taskName, string description)
+        public static Task addTask(string taskName, string description, User user)
         {
             var task1 = new Task();
-            // task1.User = user;
-            // Console.Write("What kind of help do you need? (Shopping, Cleaning, Cooking, Childcare): ");
-            // Console.Write("Task name (eg. Katie Afterschool): ");
+            task1.User = user;
             task1.TaskName = taskName;
-
             task1.TaskDescription = description;
-
             task1.Completed = false;
 
             var db = new FriendlyHelperModel();
@@ -59,6 +55,12 @@ namespace FriendlyHelpers
             db.Dispose();
 
             return task1;
+        }
+
+        public static User GetUserByEmail(string emailAddress)
+        {
+            var db = new FriendlyHelperModel();
+            return db.Users.Where(c => c.EmailAddress.ToLower() == emailAddress.ToLower()).FirstOrDefault();
         }
         public static IEnumerable<Task> GetAllTasksByUserEmail(string emailAddress)
         {

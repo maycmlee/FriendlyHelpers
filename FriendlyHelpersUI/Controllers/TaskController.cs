@@ -26,9 +26,9 @@ namespace FriendlyHelpersUI.Controllers
         [HttpPost]
         public ActionResult Create(Task task)
         {
-            
-            //Need to revise addTask method
-            FriendlyHelper.addTask(task.TaskName, task.TaskDescription);
+
+            var user = FriendlyHelper.GetUserByEmail(User.Identity.Name);
+            FriendlyHelper.addTask(task.TaskName, task.TaskDescription, user);
             return RedirectToAction("Index");
         }
     }
