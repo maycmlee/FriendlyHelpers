@@ -10,6 +10,7 @@ namespace FriendlyHelpersUI.Controllers
     public class TaskController : Controller
     {
         // GET: Task
+        [Authorize]
         public ActionResult Index()
         {
 
