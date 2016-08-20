@@ -16,16 +16,16 @@ namespace FriendlyHelpers
 
         [Key]
         public int Id { get; private set; }
+
         public string TaskName { get; set; }
 
-        public string TaskDescription { get; set; }
-        public string Category { get; set; }
+        [Display(Name="Category")]
+        public TaskTypes TypeOfTask { get; set; }
 
-        // The task needs to be completed by this date and time.
-        // public DateTime DateandTime { get; set; }
+        public string TaskDescription { get; set; }
+
         public bool Completed { get; set; }
         public virtual User User { get; set; }
-        public TaskTypes TypeOfTask { get; set; }
         #endregion
 
     }

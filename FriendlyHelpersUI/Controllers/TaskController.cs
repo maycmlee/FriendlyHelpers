@@ -28,7 +28,7 @@ namespace FriendlyHelpersUI.Controllers
         {
             
             //Need to revise addTask method
-            FriendlyHelper.addTask(task.Category, task.TaskName, task.TaskDescription);
+            FriendlyHelper.addTask(task.TaskName, task.TaskDescription);
             return RedirectToAction("Index");
         }
     }
