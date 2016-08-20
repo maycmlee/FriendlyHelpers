@@ -41,17 +41,17 @@ namespace FriendlyHelpers
             return user;
         }
 
-        public static Task addTask(User user)
+        public static Task addTask(string category, string taskName, string description)
         {
             var task1 = new Task();
-            task1.User = user;
-            Console.Write("What kind of help do you need? (Shopping, Cleaning, Cooking, Childcare): ");
-            task1.Category = Console.ReadLine();
+            // task1.User = user;
+            // Console.Write("What kind of help do you need? (Shopping, Cleaning, Cooking, Childcare): ");
+            task1.Category = category;
             DetermineTaskType(task1, task1.Category);
-            Console.Write("Task name (eg. Katie Afterschool): ");
-            task1.TaskName = Console.ReadLine();
-            Console.Write("Task Description (eg. Pick Katie up from school.  Give snack.  Help with her homework.): ");
-            task1.TaskDescription = Console.ReadLine();
+            // Console.Write("Task name (eg. Katie Afterschool): ");
+            task1.TaskName = taskName;
+            //Console.Write("Task Description (eg. Pick Katie up from school.  Give snack.  Help with her homework.): ");
+            task1.TaskDescription = description;
             //Console.Write("Date and Time you need it completed (eg. ..format?): ");
             //task1.DateandTime = Console.ReadLine();
             // Have to figure out format for date and time

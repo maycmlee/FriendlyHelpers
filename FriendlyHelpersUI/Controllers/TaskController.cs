@@ -26,8 +26,10 @@ namespace FriendlyHelpersUI.Controllers
         [HttpPost]
         public ActionResult Create(Task task)
         {
+            
             //Need to revise addTask method
-            FriendlyHelper.addTask();
+            FriendlyHelper.addTask(task.Category, task.TaskName, task.TaskDescription);
+            return RedirectToAction("Index");
         }
     }
 }
