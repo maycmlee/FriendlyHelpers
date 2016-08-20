@@ -21,7 +21,7 @@ namespace FriendlyHelpersUI.Models
     public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
     {
         public ApplicationDbContext()
-            : base("DefaultConnection", throwIfV1Schema: false)
+            : base("FriendlyHelperModel", throwIfV1Schema: false)
         {
         }
 
